@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Educativo de Matemáticas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Juego Educativo de Matemáticas</h1>
+        <div id="game">
+            <h2 id="question">Pregunta aquí</h2>
+            <input type="number" id="answer" placeholder="Escribe tu respuesta">
+            <button id="submitBtn" onclick="checkAnswer()">Enviar</button>
+            <p id="feedback"></p>
+            <button id="nextBtn" onclick="nextQuestion()" style="display: none;">Siguiente Pregunta</button>
+        </div>
+        <button onclick="showScores()">Ver Puntajes</button>
+    </div>
+    
+    <div id="scorePopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="hideScores()">&times;</span>
+            <h2>Puntajes</h2>
+            <ol id="scoreList"></ol>
+            <button onclick="restartGame()">Reiniciar Juego</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
